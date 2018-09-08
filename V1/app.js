@@ -12,11 +12,12 @@ var campgrounds= [
 
 app.get("/",function(req,res){
     res.render("landing");
+    
 });
 
 app.get("/campgrounds",function(req,res){
 res.render("campgrounds",{campgrounds:campgrounds});
-    
+
 });
     
 app.post("/campgrounds",function(req,res){
@@ -28,9 +29,9 @@ app.post("/campgrounds",function(req,res){
     res.redirect("/campgrounds");
     
 });
-
 app.get("/campgrounds/new",function(req, res) {
     res.render("new.ejs");
+
 });
 app.listen(process.env.PORT,process.env.IP,function(){
     console.log("Yelp camp has started");
